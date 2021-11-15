@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from "next/image"
 import {motion} from "framer-motion"
+import Arrow from './Arrow'
 
 const VariantImageContainer = (delay) =>{ 
   return {
@@ -19,6 +20,27 @@ const VariantImageContainer = (delay) =>{
       }
   }
 }}
+
+
+
+const VariantImageSmall = {
+  hidden : {
+    scale : 3,
+    opacity : 0,
+    rotate : 0
+  },
+  visible : {
+    scale : 1,
+    rotate : 360 ,
+    opacity : 1,
+    transition : {
+      when : 'beforeChildren',
+      stiffness : 120,
+      type : 'spring'
+    }
+
+  }
+}
 
 const VariantImage = {
   hidden : {
@@ -58,6 +80,12 @@ const VariantContainer = (delay) => {
     scale : 1,
     transition : {
       yoyo : Infinity
+    }
+  },
+  exit : {
+    x : '-100vw',
+    transition : {
+      ease : 'easeInOut'
     }
   }
 }
@@ -100,13 +128,13 @@ const VariantHideMe = {
     }
 }
 }
-  
+
 
   const WordDrag = (tabString , classDrag,delay) => {
     const Tem = tabString.map((l,i) => {
     return (
       <motion.div key={i} className={classDrag}
-      variants={VariantContainer(i * 0.05 + delay)} initial='hidden' animate='visible' whileDrag='drag'
+      variants={VariantContainer(i * 0.05 + delay)} initial='hidden' exit="exit" animate='visible' whileDrag='drag'
         drag dragConstraints={{top : 0,left : 0, bottom : 0,right : 0}}
         dragElastic={0.9} >
         {l}
@@ -114,7 +142,6 @@ const VariantHideMe = {
     )
   }) 
   return Tem}
-
  
 
 function HowMe() {
@@ -125,13 +152,14 @@ function HowMe() {
     const [MoreLines,SetMoreLine]  = useState(false)
     return (
         <div className="flex flex-wrap-reverse  justify-center  lg:px-4   " >
-
-            <div className="sm:w-2/4 w-3/4 mt-8   sm:mt-44 ">
+           <div className="absolute z-0  top-0 left-0 h-full w-full  bg-third bg-opacity-20 coverHowMe"></div>
+           
+            <div className="md:w-2/4  z-10 w-3/4 mt-8   md:mt-44 ">
               <motion.div className="flex whitespace-pre"> 
-                  {WordDrag(["H" , "i" , "!" , " ","I"," ","A","m"],"text-4xl sm:text-6xl  text-primary font-bold font-serif mb mb-0.5 ",0)}
+                  {WordDrag(["H" , "i" , "!" , " ","I"," ","A","m"],"text-4xl lg:text-6xl  text-primary font-bold font-serif mb mb-0.5 ",0)}
               </motion.div> 
               <div className="flex whitespace-pre">
-                  {WordDrag(["B","E","R","K","A","N","E"," ","C","h","a","m","s","e","d","d","i","n","e"],"sm:text-5xl text-3xl text-secondairy font-bold  mb-6",0.5)}
+                  {WordDrag(["B","E","R","K","A","N","E"," ","C","h","a","m","s","e","d","d","i","n","e"],"lg:text-5xl text-3xl text-secondairy font-bold  mb-6",0.5)}
               </div>
 
                 <motion.p className="lg:pr-5  font-semibold opacity-50 mb-6" variants={VariantMe} animate='visible' initial='hidden'>
@@ -146,9 +174,10 @@ function HowMe() {
 
             </div>
 
-            <motion.div className="relative mt-16 sm:mt-32"
+            <motion.div className="relative lg:flex hidden mt-16 md:mt-32"
                  drag 
-                dragElastic={0.4}>
+                dragElastic={0.4}
+                dragConstraints={{top : 0, left : 0, right : 0,bottom : 0}}>
                 <div className="absolute -top-5  -left-14  ">
                     <Image src="/emoji.jpg" width={70} height={70} />
                 </div>
@@ -163,7 +192,19 @@ function HowMe() {
                 </div>
 
             </motion.div>
-            
+            <motion.div className="lg:hidden  relative mt-16 md:mt-32"
+                 drag 
+                dragElastic={0.4}
+                dragConstraints={{top : 0, left : 0, right : 0,bottom : 0}}>
+                <div className="relative" >
+                     <motion.div id="shadowImage" variants={VariantImageSmall} animate='visible' initial='hidden'
+                      className="bg-contain   bg-chamsou  w-60 h-60  left-16 z-10 rounded-full">
+                    </motion.div>
+                </div>
+
+            </motion.div>
+
+           
         </div>
     )
 }

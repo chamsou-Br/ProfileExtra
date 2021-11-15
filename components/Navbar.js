@@ -49,7 +49,7 @@ const [itemNavActive, setitemNavActive] = useState(0)
 
     return (
         <>
-        <motion.div className="md:flex  justify-around  mt-5 ">
+        <motion.div className="md:flex  justify-around  pt-4 ">
 
                     <motion.div className="font-bold text-sm   px-3 py-1 rounded-2xl drop-shadow-3xl"
                          variants={VariantNavbar} animate='visible' initial='hidden'>
