@@ -203,7 +203,6 @@ function HowMe() {
                 </div>
 
             </motion.div>
-
            
         </div>
     )

@@ -1,10 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
 import {motion} from "framer-motion"
 import WordDrag from './WordDrag'
-import Arrow from './Arrow'
-import CardService from './CardService'
 import CardCertaficate from './CardCertaficate'
+import Arrow from './Arrow'
 
 const VariantResume = {
     hidden : {
@@ -81,7 +79,7 @@ function AwesomeCertaficate() {
   return (
       <div className="md:mt-16  sm:pt-10  i swiper">
           <div className="flex  justify-center   flex-wrap ">
-              <motion.div className="lg:mr-40 sm:mr-12 mt-10 ">
+              <motion.div className="lg:mr-40 sm:mr-12 mt-20 md:mt-10 ">
 
                   <motion.div className="flex whitespace-pre"> 
                       {WordDrag(["M" , "y" , " " , "C","e","r","t","a", "f","i","c","t","e","s"],"text-4xl sm:text-6xl  text-primary font-bold font-serif mb mb-0.5 ",0.5,VariantContainer)}
@@ -107,7 +105,7 @@ function AwesomeCertaficate() {
               <div className="mb-10 mt-10 md:mt-5 lg:mt-0 ">
                       {CardCertaficate("/coursera.png","Université de science et technologies" , course1,0.2)}
                       {CardCertaficate("/udemy.jpg","fromgooghdsfdbgle" , course2,0.6)}
-                      {CardCertaficate("/coursera.png","From Google" , course1,1)}
+                      {CardCertaficate("/coursera.png","From Google" , course3,1)}
                       {CardCertaficate("/coursera.png","From Google" , course4,1.4)}
                       {CardCertaficate("/coursera.png","From Google" , course5,1.8)}
 

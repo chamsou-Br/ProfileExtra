@@ -33,6 +33,12 @@ function SideBar() {
        else if (location == "/certaficates") {
            setactivePage(3)
        }
+       else if (location == "/skills") {
+           setactivePage(4)
+       }
+       else if (location == "/projecrs") {
+           setactivePage(5)
+       }
         
     }, [location])
 
@@ -62,27 +68,32 @@ function SideBar() {
 
                 <div className="mt-6">
                     <motion.div onHoverStart={()=>setcolorgithub("#FFF")} onHoverEnd={()=> setcolorgithub("#FCA61F")}
-                                className="SM p-2 bg-third rounded-full mb-4">
+                                className="SM p-2 bg-third rounded-full mb-4" 
+                                onClick={()=> window.open("https://github.com/chamsou-Br")}>
                          <FaGithub color={colorgithub} size={24} className="" />
                     </motion.div>
 
                     <motion.div onHoverStart={()=>setcolorgoogle("#FFF")} onHoverEnd={()=> setcolorgoogle("#FCA61F")}
-                                className="SM p-2 bg-third rounded-full mb-4">
+                                className="SM p-2 bg-third rounded-full mb-4"
+                                onClick={()=> window.location.href = 'mailto:jc_berkane@esi.dz?Subject=Hello%26body=content'}>
                         <FaGooglePlus color={colorgoogle} size={24} className="" />
                     </motion.div>
 
                     <motion.div onHoverStart={()=>setcolorlinkedin("#FFF")} onHoverEnd={()=> setcolorlinkedin("#FCA61F")}
-                                className="SM p-2 bg-third rounded-full mb-4">
+                                className="SM p-2 bg-third rounded-full mb-4"
+                                onClick={()=> window.open("https://www.linkedin.com/in/chamseddine-berkane-0983681bb/")}>
                          <FaLinkedin color={colorlinkedin} size={24} className="" />
                     </motion.div>
 
                     <motion.div onHoverStart={()=>setcolorfacebook("#FFF")} onHoverEnd={()=> setcolorfacebook("#FCA61F")}
-                                className="SM p-2 bg-third rounded-full mb-4">
+                                className="SM p-2 bg-third rounded-full mb-4"
+                                onClick={()=> window.open("https://ne-np.facebook.com/chamseddine.berkane.9")}>
                          <FaFacebook color={colorfacebook} size={24} className="" />
                     </motion.div>
 
                     <motion.div onHoverStart={()=>setcolorinstagram("#FFF")} onHoverEnd={()=> setcolorinstagram("#FCA61F")} 
-                                className="SM p-2 bg-third rounded-full mb-4">
+                                className="SM p-2 bg-third rounded-full mb-4"
+                                onClick={()=> window.open("https://www.instagram.com/_ch.br__/")}>
                       <FaInstagram color={colorinstagram} size={24} className="" />
                     </motion.div>
                     
@@ -91,7 +102,7 @@ function SideBar() {
                     
                     
                 </div>
-                <div className=" mt-52 text-center ml-3">
+                <div className=" mt-44 text-center ml-3">
                     <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
                         {
                             "activepage" : activePage ==0
@@ -111,6 +122,16 @@ function SideBar() {
                     <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
                         {
                             "activepage" : activePage ==3
+                        })}>    
+                    </div>
+                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
+                        {
+                            "activepage" : activePage ==4
+                        })}>    
+                    </div>
+                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
+                        {
+                            "activepage" : activePage ==5
                         })}>    
                     </div>
                 </div>

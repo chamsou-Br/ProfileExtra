@@ -77,7 +77,7 @@ function AwesomeServices() {
     return (
         <div className="md:mt-24  sm:pt-12 i swiper">
             <div className="flex  justify-center   flex-wrap ">
-                <motion.div className="lg:mr-40 sm:mr-12 mt-10 ">
+                <motion.div className="lg:mr-40 sm:mr-12 mt-20 md:mt-10 ">
 
                     <motion.div className="flex whitespace-pre"> 
                         {WordDrag(["M" , "y" , " " , "A","w","s","o","m", "e"],"text-4xl md:text-6xl  text-primary font-bold font-serif mb mb-0.5 ",0.5,VariantContainer)}
@@ -113,6 +113,7 @@ function AwesomeServices() {
 
             </div>
 
+  
 
 
             

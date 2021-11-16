@@ -1,13 +1,5 @@
-import { useRouter } from 'next/router'
-import Link from "next/link"
-import Head from 'next/head'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import AwesomeServices from '../components/AwesomeServices'
-import SwiperGallery from '../components/DemoCarousel'
 import HowMe from '../components/HowMe'
-import Navbar from '../components/Navbar'
-import Skils from '../components/skiils'
 import { AnimatePresence } from 'framer-motion'
 
 
