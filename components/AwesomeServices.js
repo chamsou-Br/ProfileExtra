@@ -107,7 +107,7 @@ function AwesomeServices() {
                     {CardService("/dev.jpg","mobile developer" , mobiledev,0.6)}
                     </div>
                     <div className="">
-                    {CardService("/mobile.jpg","data scientist Assistant" , dataScience,1)}
+                    {CardService("/mobile.jpg","data scientist passionate" , dataScience,1)}
                     </div>
                  </div>
 

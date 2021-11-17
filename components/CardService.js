@@ -27,7 +27,7 @@ const CardService = (img , title , desc,delay) => {
     return (
         <motion.div className="text-center flex max-h-24  mb-6 z-10 shadowService md:px-4 sm:px-4  py-3 w-96 relative" 
             drag 
-            dragElastic={1}
+            dragElastic={0.5}
             dragConstraints={{top : 0, left : 0, right : 0,bottom : 0}}
             variants={VariantCard(delay)} animate='visible' initial='hidden' whileHover="hover"
             
