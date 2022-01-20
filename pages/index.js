@@ -25,7 +25,7 @@ export default function Home() {
   else {
   return (
     <AnimatePresence exitBeforeEnter>
-        <div className="">
+        <div className=" h-screen">
         <HowMe />
         </div>
     </AnimatePresence>

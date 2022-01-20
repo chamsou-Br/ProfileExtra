@@ -2,7 +2,10 @@ import AwesomeProjects from "../components/AwesomeProjects";
 
 const Projects = () => {
     return ( 
-        <AwesomeProjects/>
+        <div className=" h-screen overflow-y-hidden">
+            <AwesomeProjects/>
+        </div>
+        
      );
 }
  

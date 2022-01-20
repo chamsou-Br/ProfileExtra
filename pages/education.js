@@ -2,7 +2,10 @@ import AwesomeEducation from "../components/AwesomeEducation";
 
 const Education = () => {
     return ( 
-        <AwesomeEducation />
+        <div className=" h-screen overflow-y-hidden">
+               <AwesomeEducation />
+        </div>
+     
      );
 }
  

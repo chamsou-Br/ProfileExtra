@@ -12,6 +12,7 @@ function SideBar() {
 
     //location
     const location = useRouter().route ;
+    const router = useRouter();
     const [activePage, setactivePage] = useState(0)
     
     // color icons
@@ -20,6 +21,7 @@ function SideBar() {
     const [colorlinkedin, setcolorlinkedin] = useState("#FCA61F")
     const [colorfacebook, setcolorfacebook] = useState("#FCA61F")
     const [colorinstagram, setcolorinstagram] = useState("#FCA61F")
+    
 
     useEffect(() => {
 
@@ -36,7 +38,7 @@ function SideBar() {
        else if (location == "/skills") {
            setactivePage(4)
        }
-       else if (location == "/projecrs") {
+       else if (location == "/projects") {
            setactivePage(5)
        }
         
@@ -103,36 +105,42 @@ function SideBar() {
                     
                 </div>
                 <div className=" mt-44 text-center ml-3">
-                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
+                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3 SM",
                         {
                             "activepage" : activePage ==0
-                        })}>
+                        })}
+                        onClick={()=> router.push("/")}>
                     </div>
 
-                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
+                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3 SM",
                         {
                             "activepage" : activePage ==1
-                        })}>    
+                        })}
+                        onClick={()=> router.push("/services")}>    
                     </div>
-                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
+                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3 SM",
                         {
                             "activepage" : activePage ==2
-                        })}>    
+                        })}
+                        onClick={()=> router.push("/education")}>    
                     </div>
-                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
+                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3 SM",
                         {
                             "activepage" : activePage ==3
-                        })}>    
+                        })}
+                        onClick={()=> router.push("/certaficates")}>    
                     </div>
-                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
+                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3 SM",
                         {
                             "activepage" : activePage ==4
-                        })}>    
+                        })}
+                        onClick={()=> router.push("/skills")}>    
                     </div>
-                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3",
+                    <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3 SM",
                         {
                             "activepage" : activePage ==5
-                        })}>    
+                        })}
+                        onClick={()=> router.push("/projects")}>    
                     </div>
                 </div>
 

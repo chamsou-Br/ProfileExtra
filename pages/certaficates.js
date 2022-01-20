@@ -2,7 +2,10 @@ import AwesomeCertaficate from "../components/AwesomeCertaficates";
 
 const Certaficates = () => {
     return ( 
-        <AwesomeCertaficate />
+        <div className=" h-screen overflow-y-hidden">
+            <AwesomeCertaficate />
+        </div>
+        
      );
 }
  

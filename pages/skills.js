@@ -3,7 +3,10 @@ import AwesomSkills from '../components/AwesomeSkiils'
 
 function skills() {
     return (
-        <AwesomSkills  />
+        <div className=' h-screen overflow-y-hidden'>
+             <AwesomSkills  />
+        </div>
+       
     )
 }
 
