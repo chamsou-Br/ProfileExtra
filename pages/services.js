@@ -3,7 +3,7 @@ import AwesomeServices from '../components/AwesomeServices'
 
 function services() {
     return (
-        <div className=' h-screen overflow-y-hidden'>
+        <div className=' h-screen '>
              <AwesomeServices />
         </div>
        
