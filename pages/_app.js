@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
 
     <Layout >
-          <AnimatePresence exitBeforeEnter>
+        <AnimatePresence exitBeforeEnter>
       <Component {...pageProps} />
       </AnimatePresence>
     </Layout>

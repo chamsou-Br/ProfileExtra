@@ -6,6 +6,7 @@ import Arrow from "./Arrow";
 import { useRouter } from "next/router";
 import classNames from "classnames";
 import NavbarArrow from "./navbarArrow";
+import ReactLoading from "react-loading"
 
 
 const Layout = ({children}) => {
@@ -13,7 +14,8 @@ const Layout = ({children}) => {
 
     const location = useRouter().route ;
     const [goTo, setgoTo] = useState("")
-    const [activeGo , setActiveGo] = useState(false)
+    const [activeGo , setActiveGo] = useState(false);
+    const [loading , setLoading] =   useState(true);
 
 
 
@@ -45,30 +47,42 @@ const Layout = ({children}) => {
         setTimeout(()=> {
             setActiveGo(true)
         },1000)
-         
+         setTimeout(()=> {
+                setLoading(false)
+         },2000)
      }, [location])
 
-    return ( 
-    <div className="root min-h-full relative bg-hero-back bg-cover " >
-        <Head>
-            <title>Create Next App</title>
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <div className="md:block hidden ">
-            <Navbar />
-        </div>
-        <SideBar />
-        {children}
-        <div className={classNames("" , {
-            "hidden" : activeGo == false ,
-            "block" : activeGo == true
-         })} >
-                {/* Arrow */}
-                <Arrow go={goTo}/>
-        </div>
-
-    </div>
-     );
+    if (loading) {
+        return(
+            <div className=" flex justify-center relative h-screen ">
+                <ReactLoading type="spinningBubbles" height={120} width={120}  className=" m-auto" color="#000" />
+            </div>
+            
+        )
+    }else {
+        return ( 
+            <div className="root min-h-full relative bg-hero-back bg-cover " >
+                <Head>
+                    <title>Create Next App</title>
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
+                <div className="md:block hidden ">
+                    <Navbar />
+                </div>
+                <SideBar />
+                {children}
+                <div className={classNames("" , {
+                    "hidden" : activeGo == false ,
+                    "block" : activeGo == true
+                 })} >
+                        {/* Arrow */}
+                        <Arrow go={goTo}/>
+                </div>
+        
+            </div>
+             );
+    }
+ 
 }
  
 export default Layout;
