@@ -4,7 +4,9 @@ const Certaficates = () => {
     return ( 
         <div className=" h-screen ">
             <AwesomeCertaficate />
+            
         </div>
+
         
      );
 }
