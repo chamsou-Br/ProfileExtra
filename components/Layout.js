@@ -49,7 +49,7 @@ const Layout = ({children}) => {
      }, [location])
 
     return ( 
-    <div className="root min-h-full relative bg-hero-back bg-cover" >
+    <div className="root min-h-full relative bg-hero-back bg-cover " >
         <Head>
             <title>Create Next App</title>
             <link rel="icon" href="/favicon.ico" />

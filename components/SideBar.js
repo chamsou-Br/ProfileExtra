@@ -104,7 +104,7 @@ function SideBar() {
                     
                     
                 </div>
-                <div className=" mt-44 text-center ml-3">
+                <div className=" mt-20 text-center ml-3">
                     <div className={classNames("w-4 h-4 bg-third rounded-full  mb-3 SM",
                         {
                             "activepage" : activePage ==0

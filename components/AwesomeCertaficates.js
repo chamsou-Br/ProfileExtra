@@ -77,7 +77,7 @@ function AwesomeCertaficate() {
 
 
   return (
-      <div className="md:mt-16  sm:pt-10  i swiper">
+      <div className="md:mt-10  sm:pt-10  i swiper">
           <div className="flex  justify-center   flex-wrap ">
               <motion.div className="lg:mr-40 sm:mr-12 mt-20 md:mt-10 ">
 
@@ -97,6 +97,7 @@ function AwesomeCertaficate() {
                  
                   <motion.div  className="shadowContact mt-4  font-bold text-sm text-third bg-secondairy text-center w-28 px-3
                       py-1 rounded-2xl drop-shadow-3xl"
+                      onClick={()=>window.open("https://www.canva.com/design/DAEs5pmPqX4/Mw1ZU6fWSg7_v0041cPksg/view?utm_content=DAEs5pmPqX4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink")}
                       variants={VariantResume} animate="visible" initial="hidden" whileHover="hover">
                       <span>Resume</span>
                   </motion.div>

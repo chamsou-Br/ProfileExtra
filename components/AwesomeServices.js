@@ -3,6 +3,7 @@ import {motion} from "framer-motion"
 import WordDrag from './WordDrag'
 import Arrow from './Arrow'
 import CardService from './CardService'
+import { useRouter } from 'next/router'
 
 const VariantResume = {
     hidden : {
@@ -72,6 +73,7 @@ function AwesomeServices() {
     const webDev =      "I'm a full stack developer with react ,mongo ,express and nodejs   " 
     const mobiledev =   "I'm a mobile developer with cross platform react native & flutter  "
     const dataScience = "I'm a data scientist who can Analyse and visualize data with python"
+    const router = useRouter();
 
 
     return (
@@ -94,6 +96,7 @@ function AwesomeServices() {
                    
                     <motion.div  className="shadowContact mt-4  font-bold text-sm text-third bg-secondairy text-center w-28 px-3
                         py-1 rounded-2xl drop-shadow-3xl"
+                        onClick={()=>window.open("https://www.canva.com/design/DAEs5pmPqX4/Mw1ZU6fWSg7_v0041cPksg/view?utm_content=DAEs5pmPqX4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink")}
                         variants={VariantResume} animate="visible" initial="hidden" whileHover="hover">
                         <span>Resume</span>
                     </motion.div>
