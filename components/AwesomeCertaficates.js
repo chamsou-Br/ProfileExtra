@@ -77,7 +77,7 @@ function AwesomeCertaficate() {
 
 
   return (
-      <div className="md:mt-10  sm:pt-10  i swiper">
+      <div className="md:mt-10  sm:pt-10  i swiper overflow-hidden">
           <div className="flex  justify-center   flex-wrap ">
               <motion.div className="lg:mr-40 sm:mr-12 mt-20 md:mt-10 ">
 
@@ -103,9 +103,9 @@ function AwesomeCertaficate() {
                   </motion.div>
               </motion.div>
 
-              <div className="mb-10 mt-10 md:mt-5 lg:mt-0 ">
+              <div className="mb-10 mt-10 md:mt-5 lg:mt-2 overflow-x-visible   scrollable">
                       {CardCertaficate("/coursera.png","Université de science et technologies" , course1,0.2)}
-                      {CardCertaficate("/udemy.jpg","fromgooghdsfdbgle" , course2,0.6)}
+                      {CardCertaficate("/udemy.jpg","from Google" , course2,0.6)}
                       {CardCertaficate("/coursera.png","From Google" , course3,1)}
                       {CardCertaficate("/coursera.png","From Google" , course4,1.4)}
                       {CardCertaficate("/coursera.png","From Google" , course5,1.8)}

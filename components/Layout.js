@@ -61,7 +61,7 @@ const Layout = ({children}) => {
         )
     }else {
         return ( 
-            <div className="root min-h-full relative bg-hero-back bg-cover " >
+            <div className="root min-h-full relative bg-hero-back bg-cover h-screen md:overflow-hidden" >
                 <Head>
                     <title>Create Next App</title>
                     <link rel="icon" href="/favicon.ico" />

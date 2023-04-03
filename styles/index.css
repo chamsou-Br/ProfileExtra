@@ -58,3 +58,21 @@ body {
     font-weight: 600;
 
 }
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+ body::-webkit-scrollbar-track {
+    background: #FFF;
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #5f5950;
+    border-radius: 0.1rem;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: #FCA61F;
+  }
+  

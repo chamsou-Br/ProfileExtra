@@ -151,7 +151,7 @@ function HowMe() {
     
     const [MoreLines,SetMoreLine]  = useState(false)
     return (
-        <div className="flex flex-wrap-reverse  justify-center lg:px-4   " >
+        <div className="flex flex-wrap-reverse  justify-center lg:px-4  " >
            
            
             <div className="md:w-2/4  z-10 w-3/4 mt-8   md:mt-44 ">

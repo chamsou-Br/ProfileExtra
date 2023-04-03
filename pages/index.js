@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <AnimatePresence exitBeforeEnter>
-        <div className=" h-screen">
+        <div className="h-screen overflow-hidden	">
         <HowMe />
         </div>
     </AnimatePresence>
